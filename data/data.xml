@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="school_skills_1" model="school.skills">
+            <field name="name">problem solving</field>
+        </record>
+
+        <record id="school_skills_2" model="school.skills">
+            <field name="name">Thinking</field>
+        </record>
+
+        <record id="school_skills_3" model="school.skills">
+            <field name="name">Research</field>
+        </record>
+
+
+        <record id="stage_application" model="school.student.stage">
+            <field name="name">Application</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="stage_admission" model="school.student.stage">
+            <field name="name">Admission</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="stage_enrollment" model="school.student.stage">
+            <field name="name">Enrollment</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="stage_progressing" model="school.student.stage">
+            <field name="name">Progressing</field>
+            <field name="sequence">4</field>
+        </record>
+        <record id="stage_graduated" model="school.student.stage">
+            <field name="name">Graduated</field>
+            <field name="sequence">5</field>
+        </record>
+
+    </data>
+</odoo>

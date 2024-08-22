@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="action_print_report_TimeSlot_student" model="ir.actions.report">
+            <field name="name">School Timeslots Reports</field>
+            <field name="model">school.time.slot</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">school.school_timeslot_template_view</field>
+            <field name="report_file">school.school_timeslot_template_view</field>
+            <field name="print_report_name">'School Student - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_school_time_slot"/>
+            <field name="binding_type">report</field>
+        </record>
+
+
+    </data>
+</odoo>

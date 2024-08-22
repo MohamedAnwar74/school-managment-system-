@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <!--        <record id="view_skills_tree" model="ir.ui.view">-->
+        <!--            <field name="name">school skills tree</field>-->
+        <!--            <field name="model">school.skills</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <tree>-->
+        <!--                    <field name="name"/>-->
+        <!--                </tree>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <record id="view_skills_form" model="ir.ui.view">
+            <field name="name">school skills form</field>
+            <field name="model">school.skills</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="Reference_record"/>
+                            <field name="course_ids"/>
+                        </group>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record id="action_school_skills" model="ir.actions.act_window">
+            <field name="name">Skills</field>
+            <field name="res_model">school.skills</field>
+        </record>
+
+        <menuitem id="Menu_skills_root" name="Skills" parent="Menu_school_root"
+                  action="action_school_skills"/>
+    </data>
+</odoo>

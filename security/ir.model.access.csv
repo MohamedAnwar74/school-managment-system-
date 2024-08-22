@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_student_user,school_student_user,model_school_student,school.group_school_user,1,1,1,0
+access_school_student_manager,school_student_manager,model_school_student,school.group_school_manager,1,1,1,1
+,,,,,,,
+access_school_courses,school_courses,model_school_courses,base.group_user,1,1,1,1
+access_school_skills,school_skills,model_school_skills,base.group_user,1,1,1,1
+access_school_teacher,school_teacher,model_school_teacher,base.group_user,1,1,1,1
+access_student_fees_update_wizard,student_fees_update_wizard,model_student_fees_update_wizard,base.group_user,1,1,1,1
+access_school_time_slot,school_time_slot,model_school_time_slot,base.group_user,1,1,1,1
+access_school_classroom,school_classroom,model_school_classroom,base.group_user,1,1,1,1
+access_school_level,school_level,model_school_level,base.group_user,1,1,1,1
+access_school_student_stage,school_student_stage,model_school_student_stage,base.group_user,1,1,1,1
+access_school_time_slot,school_time_slot,model_school_time_slot,base.group_user,1,1,1,1
+access_school_courses_optional,school_courses_optional,model_school_courses_optional,base.group_user,1,1,1,1
+access_student_report_wizard,student_report_wizard,model_student_report_wizard,base.group_user,1,1,1,1
+access_school_time_slot_wizard,school_time_slot_wizard,model_school_time_slot_wizard,base.group_user,1,1,1,1

@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="view_level_tree" model="ir.ui.view">
+            <field name="name">school level tree</field>
+            <field name="model">school.level</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_level_form" model="ir.ui.view">
+            <field name="name">school level form</field>
+            <field name="model">school.level</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="course_ids"/>
+                        </group>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record id="action_school_level" model="ir.actions.act_window">
+            <field name="name">level</field>
+            <field name="res_model">school.level</field>
+        </record>
+
+        <menuitem id="Menu_level_root" name="Level" parent="Menu_school_root"
+                  action="action_school_level"/>
+    </data>
+</odoo>

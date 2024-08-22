@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="view_employee_national_id_tree" model="ir.ui.view">
+            <field name="name">hr employee form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <!-- Syntax (1) // Short path -->
+                <xpath expr="//field[@name='work_email']" position="after">
+                    <field name="national_id"/>
+                </xpath>
+                <!-- Syntax (2) // Full path -->
+                <xpath expr="//page/group/group[1]/field[@name='phone']" position="after">
+                    <field name="passport_no"/>
+                </xpath>
+                <!-- Syntax (3) // Field path -->
+                <field name='has_work_permit' position='after'>
+                    <field name="passport_no"/>
+                </field>
+                <!-- Syntax (4) // Attributes -->
+                <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                    <!--                    <attribute name="options">{'no_create': 1}</attribute>-->
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="placeholder"></attribute>
+                </xpath>
+            </field>
+
+        </record>
+        <!-- Action inhertance -->
+        <record model="ir.actions.act_window" id="hr.open_view_employee_list_my">
+            <field name="view_mode">tree,activity,form</field>
+<!--            <field name="domain">[('company_type','=','person')]</field>-->
+            <!--            <field name="search_view_id"></field>-->
+        </record>
+
+        <!-- Menu Inheritance -->
+        <menuitem id="hr.menu_hr_root" name="ITSS Employees"/>
+
+
+    </data>
+</odoo>

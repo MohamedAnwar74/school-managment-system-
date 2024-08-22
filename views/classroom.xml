@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record id="view_classrooms_tree" model="ir.ui.view">
+            <field name="name">school classrooms tree</field>
+            <field name="model">school.classroom</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="room_name"/>
+                    <field name="capacity"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_classrooms_form" model="ir.ui.view">
+            <field name="name">school classrooms form</field>
+            <field name="model">school.classroom</field>
+            <field name="arch" type="xml">
+
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="room_name"/>
+                            <field name="capacity"/>
+                        </group>
+                        <group>
+                            <field name="level_ids" options="{'create': 0}"/>
+                        </group>
+                        <group>
+                            <field name="course_ids" widget="many2many_tags" force_save="1" readonly="1"/>
+                            <field name="teacher_ids" widget="many2many_tags" force_save="1" readonly="1"/>
+                            <field name="time_slot_ids"/>
+                        </group>
+                    </sheet>
+
+                </form>
+
+
+            </field>
+        </record>
+        <record id="action_school_classrooms" model="ir.actions.act_window">
+            <field name="name">ClassRooms</field>
+            <field name="res_model">school.classroom</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="Menu_classrooms_root" name="ClassRooms" parent="Menu_school_root"
+                  action="action_school_classrooms"/>
+    </data>
+</odoo>
